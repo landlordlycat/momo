@@ -12,86 +12,45 @@
 <img src="https://img.shields.io/badge/gorm-1.9.12-red"/>
 </div>
 
-
-### 前端: VUE + Android + IOS
+### 前端: VUE + Android + IOS + Uniapp
 
 ### 微服务（K8S,Docker容器）组成：
 
 - **Goim** ：不多说 B站 IM架构 官网：http://goim.io
-- **SRS** ：SRS是一个高效的实时视频服务器，支持RTMP/WebRTC/HLS/HTTP-FLV/SRT/GB28181。
-- **webrtc** ：Janus Gateway：Meetecho优秀的通用WebRTC服务器（SFU）。
+- **流媒体服务器** ：golang开发的流媒体服务器，支持RTMP/WebRTC/HLS/HTTP-FLV/SRT/GB28181。
+- **webrtc** ： Meetecho优秀的通用WebRTC服务器（SFU）。
 - **MongoDB** ：基于文档的分布式数据库。
 - **Redis**：内存中的数据结构存储，用作数据库，缓存和消息代理。
 - **kafka** ：队列 群聊，私聊，消息通知等。
-- **Coturn** ：TURN和STUN Server的开源项目；
 - **Nginx** ：高性能负载平衡器，Web服务器和有HTTPS / Quiche和Brtoli支持的反向代理；
 - **K8S+Docker**：用于构建、部署和管理容器化应用程序的平台。
-- **后台管理界面**: php版 | golang版 + vue + Element-UI 
+- **后台管理界面**: php版 + vue + Element-UI  | golang版 + vue + Element-UI 
 ----------------
-
-**技术群：**
-![](https://img-blog.csdnimg.cn/20200623093238797.png)
-
-----------------
-微信：BCFind5 【请备注好信息】
-
-文档地址：https://www.52webrtc.top
 
 博客地址：https://blog.csdn.net/u012115197/article/details/106916635
 
-Gitee：https://gitee.com/baoyalive/baoyalive.git
+Gitee：https://gitee.com/baoyalive/baoyalive.git （历史代码备份）
+
+演示地址：[http://www.onionnews.cn/](http://www.onionnews.cn/)
 
 ----------------
 
-### 商业合作 （UI设计，定制开发，系统重构，代理推广等）
-
-----------------
-
-[上架APP请搜：]() 【欢心交友】
-
-SRS+Goim演示地址：http://live.52webrtc.top
-
-直播APP下载地址：https://wwn.lanzouy.com/i7Td609t1zwh
-
-语聊APP下载：https://wwn.lanzouy.com/i56Zx09sz33e
-
-后台管理：http://k8s.52webrtc.top 用户名：test123 密码：test123
-
-----------------
-
-**前端展示**
-![前端展示](https://img-blog.csdnimg.cn/20210605203510511.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTIxMTUxOTc=,size_16,color_FFFFFF,t_70#pic_center)
-
-**后台界面**
-![vue界面](https://img-blog.csdnimg.cn/6a993757bb6e43698358ea12f838e8ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5Y2I5aSc56CB54uC,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-![k8s界面](https://img-blog.csdnimg.cn/ae959e8fb8994ef2a3b92356c3276890.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5Y2I5aSc56CB54uC,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
-
-----------------
-
-### 入门推荐书籍
-
-* [FFmpeg从入门到精通](https://book.douban.com/subject/30178432/) - 强烈推荐
-* [直播系统开发：基于Nginx与Nginx-rtmp-module](https://book.douban.com/subject/30423374/)
-* [WebRTC权威指南](https://book.douban.com/subject/26915289/)
-* [CDN技术详解](https://book.douban.com/subject/10759173/)
-
-### 技术结构
+### 技术栈
 
 
-## PHP框架开发
+## php框架开发版本 【开源】
 
--  **PHP版本视频互动系统由 WEB 系统、REDIS 服务、MYSQL 服务、视频服务、聊天服务、后台管理系统和定时监控组成，后台管理及API采用PHP语言开发**
+-  **PHP版本视频互动系统由 WEB 系统、REDIS 服务、MYSQL 服务、视频服务、workman聊天服务、后台管理系统和定时监控组成，后台管理及API采用PHP语言开发**
 
 1. WEB 系统提供页面、接口逻辑。
 2. REDIS 服务提供数据的缓存、存储动态数据。
 3. MYSQL 服务提供静态数据的存储。
-4. 视频服务提供视频直播，傍路直播，转码、存储、点播等 支持腾讯云 阿里云 七牛等 自建流媒体服务器等（包括成熟方案 nginx + SRS + WebRtc）。
-5. kafka 队列 聊天服务提供直播群聊，私聊，消息通知等。
-6. prometheus系统监控：监听主播异常掉线情况、直播消息推送等。
+4. 视频服务提供视频直播，傍路直播，转码、存储、点播等 支持腾讯云 阿里云 七牛等 自建流媒体服务器等
+5. 聊天服务提供直播群聊，私聊，消息通知等。
+6. 后台框架：thinkphp框架。
  
 ------------
-## golang微服务架构
+## golang微服务架构版本【未开源】
 
 **微服务介绍**
 
@@ -102,7 +61,7 @@ SRS+Goim演示地址：http://live.52webrtc.top
 5. 自动校验客户端请求参数合法性
 6. 大量微服务治理和并发工具包
 
-**架构图**
+**golang微服务架构图**
 
 ![](https://github.com/DOUBLE-Baller/momo/blob/master/doc/doc.jpg?raw=true)
 
@@ -144,38 +103,29 @@ nginx做网关，使用nginx的auth模块，调用后端的backend服务统一�
 ```
 **延迟队列、定时任务**
 ```
-延迟队列、定时任务本项目使用的是asynq ， google团队给予redis开发的简单中间件，
-当然了asynq也支持消息队列，你也可也把kq消息队列替换成这个，毕竟只需要redis不需要在去维护一个kafka也是不错的
-链接：https://github.com/hibiken/asynq
+延迟队列、定时任务本项目使用的是asynq ， google团队给予redis开发的简单中间件， asynq也支持消息队列，你也可也把kq消息队列替换成kafka
 ```
 **分布式事务DTM**
 ```
-分布式事务准备使用的是dtm，本项目目前还未使用到，后续准备直接集成就好了，如果读者使用直接去看那个源码就行了
+分布式事务使用的是dtm，单节点每秒1W条事务，平常抢购秒杀足够应付了。
 ```
 **K8S部署**
 ```
-stp1：搭建一个gitlab、jenkins、harbor，将代码放在gitlab
-
-stp2：在gitlab创建流水线，一个服务一个流水线。
-
-stp3: gitlab拉取代码-->CI/CD检测（不会的可自行百度）--->构建镜像（Dockerfile可以通过goctl自动生成）--->推送到harbor镜像服务--->使用kubectl去k8s拉取镜像（ack、ask都行，ask无法使用daemonset 不能用filebeat）--->done
+简单易用: 提供可视化的 Web UI，极大降低 Kubernetes 部署和管理门槛.
+按需创建: 调用云平台 API，一键快速创建和部署 Kubernetes 集群
+按需伸缩: 快速伸缩 Kubernetes 集群，优化资源使用效率
+按需修补: 快速升级和修补 Kubernetes 集群.
+离线部署: 支持完全离线下的 Kubernetes 集群部署
+自我修复: 通过重建故障节点确保集群可用性
+全栈监控: 提供从Pod、Node到集群的事件、监控、告警、和日志方案
+Multi-AZ 支持: 将 Master 节点分布在不同的故障域上确保集群高可用
+应用商店: 内置 Apps 应用商店
+GPU 支持: 支持 GPU 节点，助力运行深度学习等应用.
 
 ```
+### 商业合作 （UI设计，定制开发，系统重构，代理推广等）
 
-## 视频服务
-------------
-
-README ： https://github.com/DOUBLE-Baller/momo/tree/master/livego
-
-
-## IM服务
-------------
-
-README ：https://github.com/DOUBLE-Baller/momo/tree/master/IM
-
-==问题反馈==
-
-**在使用中有任何问题，欢迎反馈给我们**
-
-https://github.com/DOUBLE-Baller/momo/issues
+**微信**：BCFind5 【请备注好信息，否则不加】
+**QQ**：407193275 【请备注好信息，否则不加】
+**TG**：@qmcloud 【回复较慢】
 
